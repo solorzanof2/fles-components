@@ -5,8 +5,7 @@ export const config: Config = {
   namespace: 'fles-components',
   outputTargets: [
     {
-      type: 'dist',
-      esmLoaderPath: '../loader'
+      type: 'dist'
     },
     {
       type: 'docs-readme'
