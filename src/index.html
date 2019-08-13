@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/fles-components.esm.js"></script>
+  <script nomodule src="/build/fles-components.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: all .5s ease;
+    }
+
+    .sidebar {
+      height: 100vh;
+      width: 240px;
+      background: #121212;
+      border: 1px solid #cccccc;
+    }
+
+    fles-menu-item {
+      --button-color-text: #ffffff;
+      --indicator-color: #ff8800;
+      --submenu-top-indicator-color: #121212;
+      --submenu-background-button: #888888;
+      --submenu-color-text: #121212;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <fles-menu>
+      <fles-menu-item text="Home" icon-source="material-icons" icon="dashboard" navigable></fles-menu-item>
+      <fles-menu-item text="Receipts" icon-source="material-icons" icon="receipt" navigable></fles-menu-item>
+      <fles-menu-item text="Contacts" icon-source="material-icons" icon="group" navigable></fles-menu-item>
+      <fles-menu-item text="Products" icon-source="material-icons" icon="store">
+        <fles-menu-item text="List" icon-source="material-icons" icon="list" navigable></fles-menu-item>
+        <fles-menu-item text="Inventory" icon-source="material-icons" icon="ballot" navigable></fles-menu-item>
+        <fles-menu-item text="Prices" icon-source="material-icons" icon="local_offer" navigable></fles-menu-item>
+        <fles-menu-item text="Formulas" icon-source="material-icons" icon="functions" navigable></fles-menu-item>
+        <fles-menu-item text="Categories" icon-source="material-icons" icon="category" navigable></fles-menu-item>
+      </fles-menu-item>
+      <fles-menu-item text="Rinde" icon-source="material-icons" icon="assignment" navigable></fles-menu-item>
+      <fles-menu-item text="Cash Register" icon-source="material-icons" icon="monetization_on" navigable>
+      </fles-menu-item>
+      <fles-menu-item text="History" icon-source="material-icons" icon="insert_chart" navigable></fles-menu-item>
+      <fles-menu-item text="Settings" icon-source="material-icons" icon="settings">
+        <fles-menu-item text="Masters" icon-source="material-icons" icon="assignment" navigable></fles-menu-item>
+        <fles-menu-item text="Users" icon-source="material-icons" icon="account_box" navigable></fles-menu-item>
+      </fles-menu-item>
+    </fles-menu>
+  </div>
+
+  <div class="body-container">
+    <h1>BODY REFERENCE</h1>
+  </div>
+
+  <script>
+    let initialize = () => {
+      console.log({
+        message: '# script has been initialized!'
+      });
+    }
+
+    initialize();
+
+    let nonNavigable = () => {
+      return false;
+    }
+  </script>
+</body>
+
+</html>

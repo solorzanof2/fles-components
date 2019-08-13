@@ -1,0 +1,90 @@
+:host {
+  --button-color-text: #ffffff;
+  --indicator-color: #fa923f;
+  --submenu-top-indicator-color: #121212;
+  --submenu-background-button: #888888;
+  --submenu-color-text: #888888;
+}
+
+.fles-menu-item-wrapper {
+  .fles-menu-button {
+    background: transparent;
+    padding: 20px;
+    border: none;
+    color: var(--button-color-text);
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    .fles-menu-button-inner {
+      display: block;
+      width: 67%;
+    }
+    
+    i {
+      margin-right: 16px;
+    }
+
+    .chevron-icon {
+      margin-right: 0px;
+      top: 33%;
+      right: 20px;
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 100%;
+      background: var(--indicator-color);
+      left: 0;
+      top: 0;
+      transition: opacity .5s ease;
+      opacity: 0;
+    }
+
+    &:hover:before {
+      opacity: 1;
+    }
+  }
+
+  .collapsible {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s ease;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: var(--submenu-top-indicator-color);
+      left: 25px;
+      top: -7px;
+      transform: rotate(45deg);
+      z-index: 1;
+    }
+    
+    .fles-menu-submenu {
+      
+      button {
+        background: var(--submenu-background-button) !important;
+        color: var(--submenu-color-text);
+        padding-left: 40px;
+      }
+  
+    }
+  }
+}

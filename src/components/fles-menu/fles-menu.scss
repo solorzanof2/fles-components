@@ -1,0 +1,13 @@
+.fles-menu-wrapper {
+  height: 100%;
+  z-index: 1;
+  
+  .fles-menu-scrollable {
+    overflow-y: scroll;
+    height: 100%;
+
+    &::-webkit-scrollbar { 
+      display: none; 
+    }
+  }
+}
